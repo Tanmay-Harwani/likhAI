@@ -5,13 +5,14 @@ import { TypingArea } from "./components/TypingArea";
 import { StatsBar, ResultCard } from "./components/Stats";
 import { AuthPanel } from "./components/AuthPanel";
 import { Leaderboard } from "./components/Leaderboard";
+import { Profile } from "./components/Profile";
 import { Home } from "./components/Home";
 import { useAuth } from "./auth/AuthContext";
 import { supabase } from "./lib/supabase";
 
 type DomainFilter = Domain | "all";
 type FormatFilter = Format | "all";
-type View = "home" | "type" | "board";
+type View = "home" | "type" | "board" | "profile";
 
 function pickRandom(pool: Snippet[], excludeId?: string): Snippet {
   const candidates = pool.length > 1 ? pool.filter((s) => s.id !== excludeId) : pool;
@@ -149,9 +150,19 @@ export default function App() {
           <button className={navBtn(view === "board")} onClick={() => setView("board")}>
             leaderboard
           </button>
+          {user && profile && (
+            <button
+              className={`stats-glow px-3 py-1 rounded font-medium transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-saffron ${
+                view === "profile" ? "text-saffron bg-saffron/10" : "text-saffron"
+              }`}
+              onClick={() => setView("profile")}
+            >
+              stats
+            </button>
+          )}
           {user && profile ? (
             <>
-              <span className="text-saffron px-2">{profile.username}</span>
+              <span className="text-dim px-2">{profile.username}</span>
               <button className="text-dim hover:text-fg px-2" onClick={() => signOut()}>
                 sign out
               </button>
@@ -173,6 +184,8 @@ export default function App() {
         {view === "home" && <Home onStart={() => setView("type")} onBoard={() => setView("board")} />}
 
         {view === "board" && <Leaderboard />}
+
+        {view === "profile" && <Profile />}
 
         {view === "type" && (
           <>

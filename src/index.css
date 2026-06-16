@@ -38,3 +38,24 @@ html {
     50% { opacity: 0; }
   }
 }
+
+/* Subtle pulsing glow on the stats nav button */
+.stats-glow {
+  text-shadow: 0 0 8px rgba(232, 163, 61, 0.45);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .stats-glow {
+    animation: stats-pulse 2.6s ease-in-out infinite;
+  }
+  @keyframes stats-pulse {
+    0%, 100% {
+      text-shadow: 0 0 6px rgba(232, 163, 61, 0.35);
+    }
+    50% {
+      text-shadow: 0 0 14px rgba(232, 163, 61, 0.65), 0 0 24px rgba(232, 163, 61, 0.25);
+    }
+  }
+}
+.stats-glow:hover {
+  text-shadow: 0 0 16px rgba(232, 163, 61, 0.8), 0 0 28px rgba(232, 163, 61, 0.35);
+}
