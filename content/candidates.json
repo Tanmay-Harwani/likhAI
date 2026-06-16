@@ -1,0 +1,480 @@
+[
+  {
+    "id": "ai-temperature-and-sampling",
+    "domain": "ai",
+    "format": "theory",
+    "concept": "Temperature and Sampling",
+    "text": "Temperature in machine learning controls the randomness of predictions, and sampling methods like Monte Carlo are used to approximate complex distributions and expectations, enabling the estimation of uncertainty in models.",
+    "status": "rejected",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 3,
+      "factIssues": [
+        "The snippet is overly broad in stating that temperature in machine learning controls the randomness of predictions, as temperature is primarily associated with specific algorithms like simulated annealing or Boltzmann machines, not machine learning as a whole. Additionally, while Monte Carlo methods are indeed used for approximating complex distributions, the snippet could clarify that temperature itself is not directly related to Monte Carlo methods."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "ai-context-windows",
+    "domain": "ai",
+    "format": "theory",
+    "concept": "Context Windows",
+    "text": "Context windows are a fundamental concept in natural language processing and refer to the amount of text considered when making predictions, allowing models to capture local relationships and dependencies between words, which is essential for understanding language syntax and semantics.",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 4,
+      "factIssues": [
+        "The definition is mostly correct, but it could be more precise in stating that context windows specifically refer to the size of the surrounding text considered when predicting a target word, rather than the amount of text in general."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "ai-vector-databases",
+    "domain": "ai",
+    "format": "theory",
+    "concept": "Vector Databases",
+    "text": "Vector databases are specialized indexes that enable efficient similarity searches and nearest neighbor queries on high dimensional vector data, commonly used in artificial intelligence and machine learning applications, such as image and text embeddings.",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 4,
+      "factIssues": [
+        "The term 'indexes' could be more precisely stated as 'data structures' to encompass the variety of implementations, and 'nearest neighbor queries' could be clarified to include approximate nearest neighbors (ANN) searches which are often used in practice."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "ai-agent-tool-calling",
+    "domain": "ai",
+    "format": "theory",
+    "concept": "Agent Tool Calling",
+    "text": "Agent tool calling refers to the process of invoking external tools or services from within an artificial intelligence or machine learning agent to leverage specific capabilities or expertise, enabling more effective problem solving and decision making.",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 4,
+      "factIssues": [
+        "The definition could be improved by specifying that the external tools or services are typically accessed through APIs or other programmatic interfaces, and that the agent's problem-solving and decision-making capabilities can be enhanced through the incorporation of these external tools' outputs or results."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "ai-lora-fine-tuning",
+    "domain": "ai",
+    "format": "theory",
+    "concept": "LoRA Fine-Tuning",
+    "text": "LoRA fine-tuning is a technique used to adapt pre-trained language models to specific tasks, it involves updating the model's weights to fit the target task, allowing for efficient and effective transfer learning, this approach enables data scientists to leverage large pre-trained models and fine-tune them for specific applications.",
+    "status": "rejected",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 3,
+      "factIssues": [
+        "The snippet does not specifically highlight that LoRA stands for 'Low-Rank Adaptation', which is a key aspect of this technique, implying a lack of clarity on the methodology's name and purpose",
+        "It does not delve into how LoRA achieves efficient transfer learning, such as through the adaptation of low-rank matrices, which is crucial for understanding its technical merits"
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "st-law-of-large-numbers",
+    "domain": "stats",
+    "format": "theory",
+    "concept": "Law of Large Numbers",
+    "text": "The Law of Large Numbers states that as the number of trials increases, the average of the results will converge to the expected value, which is a fundamental concept in statistics and probability theory.",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 4,
+      "factIssues": [
+        "The statement is mostly correct, but it could be clarified that the Law of Large Numbers applies to independent and identically distributed (i.i.d.) trials, and that there are actually two forms of the Law of Large Numbers: the weak law and the strong law."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "st-bootstrap-resampling",
+    "domain": "stats",
+    "format": "theory",
+    "concept": "Bootstrap Resampling",
+    "text": "Bootstrap resampling is a statistical technique that involves creating multiple datasets from an original dataset by randomly sampling with replacement, allowing researchers to estimate the variability of a statistic or model by analyzing the distribution of results across these resampled datasets.",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 4,
+      "factIssues": [
+        "The definition is mostly correct, but it could be improved by specifying that the sampling is done with replacement from the original dataset, and that the size of the resampled datasets is typically the same as the original dataset."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "st-simpson-s-paradox",
+    "domain": "stats",
+    "format": "theory",
+    "concept": "Simpson's Paradox",
+    "text": "Simpson's Paradox occurs when a trend appears in several different groups of data but disappears or reverses when the groups are combined, due to confounding variables, leading to incorrect conclusions about the relationship between variables.",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 4,
+      "factIssues": [
+        "The definition is mostly correct, but it could be improved by explicitly stating that the paradox occurs when the groups have different distributions of the confounding variable, and that the trend reversal is due to the aggregation of these groups, not just the presence of confounding variables."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "st-type-i-vs-type-ii-errors",
+    "domain": "stats",
+    "format": "interview",
+    "concept": "Type I vs Type II Errors",
+    "text": "I would define Type I and Type II errors as two types of mistakes in statistical hypothesis testing, where I would say a Type I error occurs when a true null hypothesis is incorrectly rejected, and a Type II error occurs when a false null hypothesis is failed to be rejected.",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 5,
+      "factIssues": [],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "st-when-to-use-median-over-mean",
+    "domain": "stats",
+    "format": "interview",
+    "concept": "When to Use Median over Mean",
+    "text": "I would use median over mean when dealing with skewed distributions or outliers, as the median is more robust and better represents the central tendency in such cases, whereas the mean is sensitive to extreme values and can be misleading.",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 4,
+      "factIssues": [
+        "The statement is mostly correct, but it could be improved by specifying the type of skewness (e.g., positively skewed distributions) where the median is more representative than the mean."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "st-explaining-statistical-power",
+    "domain": "stats",
+    "format": "interview",
+    "concept": "Explaining Statistical Power",
+    "text": "I would define statistical power as the probability of correctly rejecting a false null hypothesis, which is crucial in hypothesis testing, and it depends on factors like sample size, effect size, and significance level, so I would carefully consider these elements when designing experiments to ensure adequate power.",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 4,
+      "factIssues": [
+        "The statement is almost flawless, but it could be improved by explicitly mentioning that statistical power is also dependent on the direction of the test (one-tailed or two-tailed) and the type of test being performed."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "ml-k-means-clustering",
+    "domain": "ml",
+    "format": "theory",
+    "concept": "K-Means Clustering",
+    "text": "K-Means Clustering is a type of unsupervised learning algorithm that partitions the data into K clusters based on their similarities, where K is a predefined number, and each cluster is represented by a centroid, with the goal of minimizing the sum of squared distances between each point and its closest centroid.",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 4,
+      "factIssues": [
+        "The snippet does not explicitly mention that the centroids are initially randomly placed or chosen, and then iteratively updated, and that the algorithm may not always converge to the global optimum, depending on the initial placement of the centroids."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "ml-feature-selection-strategy",
+    "domain": "ml",
+    "format": "interview",
+    "concept": "Feature Selection Strategy",
+    "text": "I would approach feature selection strategy by first understanding the problem and data, then applying techniques like correlation analysis and recursive feature elimination to identify relevant features, and finally evaluating their impact on model performance using cross-validation.",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 4,
+      "factIssues": [
+        "The answer lacks mention of other important feature selection techniques such as mutual information, LASSO, and permutation importance, and does not discuss the importance of domain knowledge in selecting features."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "ml-choosing-evaluation-metrics",
+    "domain": "ml",
+    "format": "interview",
+    "concept": "Choosing Evaluation Metrics",
+    "text": "I would choose evaluation metrics based on the problem type, considering metrics like accuracy, precision, recall, and F1 score for classification, and mean squared error or R squared for regression, to get a comprehensive understanding of my model's performance.",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 4,
+      "factIssues": [
+        "The statement is mostly correct, but it would be more accurate to mention that R squared is more suitable for evaluating the goodness of fit of a regression model, rather than its predictive performance, and that mean squared error or mean absolute error are often used for evaluating regression model performance."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "ml-explaining-a-model-to-stakehol",
+    "domain": "ml",
+    "format": "interview",
+    "concept": "Explaining a Model to Stakeholders",
+    "text": "I would explain a model to stakeholders by starting with the problem we are trying to solve and the goals of the project, then walking them through the data used to train the model, the type of algorithm used, and the key performance metrics, emphasizing how the model works and what insights it provides.",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 4,
+      "factIssues": [
+        "Lacks mention of model interpretability techniques and potential limitations or biases, which are crucial for stakeholders to understand"
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "ml-cross-validation-with-cross-va",
+    "domain": "ml",
+    "format": "python",
+    "concept": "Cross Validation with cross_val_score",
+    "text": "from sklearn.model_selection import cross_val_score\nfrom sklearn.datasets import load_iris\nfrom sklearn.svm import SVC\niris = load_iris()\nX = iris.data\ny = iris.target\nsvc = SVC(kernel='linear', C=1)\nscores = cross_val_score(svc, X, y, cv=5)\nprint(scores)",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 5,
+      "factIssues": [],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "ml-confusion-matrix-and-classific",
+    "domain": "ml",
+    "format": "python",
+    "concept": "Confusion Matrix and Classification Report",
+    "text": "from sklearn.metrics import confusion_matrix, classification_report\ny_true = [0, 1, 2, 0, 1, 2]\ny_pred = [0, 2, 1, 0, 0, 1]\nprint(confusion_matrix(y_true, y_pred))\nprint(classification_report(y_true, y_pred))",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 5,
+      "factIssues": [],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "ai-reducing-hallucinations",
+    "domain": "ai",
+    "format": "interview",
+    "concept": "Reducing Hallucinations",
+    "text": "I would approach reducing hallucinations in AI models by understanding the differences between hallucinations and true predictions, then implementing techniques like data preprocessing, regularization, and uncertainty estimation to mitigate them.",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 4,
+      "factIssues": [
+        "The response is mostly correct, but it lacks specificity in terms of which data preprocessing techniques, regularization methods, and uncertainty estimation approaches are most effective in reducing hallucinations. Additionally, it does not mention other relevant techniques such as data augmentation, ensemble methods, or evaluating and addressing biases in training data."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "ai-evaluating-llm-outputs",
+    "domain": "ai",
+    "format": "interview",
+    "concept": "Evaluating LLM Outputs",
+    "text": "I would evaluate LLM outputs by assessing their accuracy and relevance to the task at hand, considering factors such as context, bias, and uncertainty, to ensure the model is generating reliable and informative responses.",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 4,
+      "factIssues": [
+        "The response is mostly correct but lacks specific examples or metrics for evaluating accuracy, relevance, bias, and uncertainty, which could provide a more comprehensive understanding of LLM output evaluation."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "ai-chunking-strategy-for-rag",
+    "domain": "ai",
+    "format": "interview",
+    "concept": "Chunking Strategy for RAG",
+    "text": "I would approach the chunking strategy for RAG by dividing the retrieval and generation process into manageable chunks, allowing for more efficient processing and improved overall performance, this enables me to focus on optimizing each component separately.",
+    "status": "rejected",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 3,
+      "factIssues": [
+        "Lacks specific details on how the chunking strategy is implemented",
+        "Does not mention the role of embedding and tokenization in the retrieval process",
+        "Does not provide information on how the chunks are optimized for the generation process"
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "ai-calling-an-llm-api",
+    "domain": "ai",
+    "format": "python",
+    "concept": "Calling an LLM API",
+    "text": "import requests\n\napi_url = 'https://api.example.com/llm'\nheaders = {'Authorization': 'Bearer YOUR_API_KEY'}\nresponse = requests.post(api_url, headers=headers, json={'prompt': 'Hello, how are you?'})\nresult = response.json()\nprint(result)",
+    "status": "rejected",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 2,
+      "factIssues": [
+        "The API key is a placeholder and should be replaced with an actual key or a secure method of storing and retrieving keys",
+        "The code does not handle potential exceptions or errors that may occur during the API request, such as network failures or invalid responses",
+        "The code assumes that the API response will always be in JSON format, which may not be the case",
+        "The code does not check the status code of the response to ensure that the request was successful"
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "co-two-pointers",
+    "domain": "coding",
+    "format": "python",
+    "concept": "Two Pointers",
+    "text": "def two_pointers(numbers, target_sum):\n    left = 0\n    right = len(numbers) - 1\n    while left < right:\n        current_sum = numbers[left] + numbers[right]\n        if current_sum == target_sum:\n        \treturn True\n    return False",
+    "status": "rejected",
+    "evals": {
+      "formatCheck": false,
+      "factScore": null,
+      "factIssues": [],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "co-hash-map-frequency-count",
+    "domain": "coding",
+    "format": "python",
+    "concept": "Hash Map Frequency Count",
+    "text": "def hash_map_frequency_count(words):\n    frequency_count = {}\n    for word in words:\n        if word in frequency_count:\n            frequency_count[word] += 1\n        else:\n            frequency_count[word] = 1\n    return frequency_count",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 4,
+      "factIssues": [
+        "The function does not handle case sensitivity, it treats 'word' and 'Word' as different words. It also does not handle punctuation next to words, it treats 'word' and 'word,' as different words. The variable name 'words' could be more descriptive, such as 'word_list' or 'input_words'."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "co-list-comprehensions",
+    "domain": "coding",
+    "format": "python",
+    "concept": "List Comprehensions",
+    "text": "numbers = [1, 2, 3, 4, 5]\nsquared_numbers = [n ** 2 for n in numbers]\nprint(squared_numbers)\nnumbers = [1, 2, 3, 4, 5]\neven_numbers = [n for n in numbers if n % 2 == 0]\nprint(even_numbers)",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 5,
+      "factIssues": [],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "co-reading-csv-with-pandas",
+    "domain": "coding",
+    "format": "python",
+    "concept": "Reading CSV with Pandas",
+    "text": "import pandas as pd\n\ndata = pd.read_csv('data.csv')\nprint(data.head())\nprint(data.info())\nprint(data.describe())",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 4,
+      "factIssues": [
+        "No error handling for file not found or other potential exceptions when reading the CSV file",
+        "Assumes 'data.csv' is in the current working directory without specifying the full path",
+        "Does not check for missing or null values before using describe() method"
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "co-error-handling-with-try-except",
+    "domain": "coding",
+    "format": "python",
+    "concept": "Error Handling with try/except",
+    "text": "def calculate_average(numbers):\n    try:\n        return sum(numbers) / len(numbers)\n    except ZeroDivisionError:\n        return None\n    except TypeError:\n        return 'invalid input'",
+    "status": "rejected",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 2,
+      "factIssues": [
+        "The function does not handle the case where the input is not a list or other iterable, which would raise a TypeError when trying to call len() or sum().",
+        "The function does not handle the case where the list contains non-numeric values, which would raise a TypeError when trying to call sum().",
+        "Returning 'invalid input' as a string for a TypeError is not very informative and could be improved for better error handling."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "co-self-joins",
+    "domain": "coding",
+    "format": "sql",
+    "concept": "Self Joins",
+    "text": "SELECT e1.employee_id, e1.name, e2.manager_id\nFROM employees e1\nJOIN employees e2\nON e1.manager_id = e2.employee_id;",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 4,
+      "factIssues": [
+        "The query does not specify the type of join, which defaults to an INNER JOIN. It would be clearer to explicitly state the join type, e.g., 'INNER JOIN'."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "co-case-when-aggregation",
+    "domain": "coding",
+    "format": "sql",
+    "concept": "CASE WHEN Aggregation",
+    "text": "SELECT \n  order_id, \n  SUM(CASE WHEN product_category = 'Electronics' THEN order_value ELSE 0 END) AS electronics_total, \n  SUM(CASE WHEN product_category = 'Clothing' THEN order_value ELSE 0 END) AS clothing_total \nFROM orders \nGROUP BY order_id",
+    "status": "rejected",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 2,
+      "factIssues": [
+        "The GROUP BY clause should group by a column that is not being aggregated, but in this case, it's grouping by order_id which is being selected. Typically, you would want to group by a customer_id or a similar column. The current query will return one row per order, with the electronics and clothing totals for that order. However, the more common use case for this type of query is to get the totals per customer or per region, not per order. The query is syntactically correct but may not be doing what the learner expects it to do."
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "co-date-truncation-and-grouping",
+    "domain": "coding",
+    "format": "sql",
+    "concept": "Date Truncation and Grouping",
+    "text": "SELECT DATE_TRUNC('day', order_date) AS order_day, SUM(order_total) AS total_sales\nFROM orders\nGROUP BY order_day\nORDER BY order_day;",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 2,
+      "factIssues": [
+        "The GROUP BY clause should use the expression DATE_TRUNC('day', order_date) instead of the alias order_day, as SQL does not allow using aliases in the GROUP BY clause in this way. The correct query should be: SELECT DATE_TRUNC('day', order_date) AS order_day, SUM(order_total) AS total_sales FROM orders GROUP BY DATE_TRUNC('day', order_date) ORDER BY order_day;"
+      ],
+      "duplicateOf": null
+    }
+  },
+  {
+    "id": "co-deduplication-with-row-number",
+    "domain": "coding",
+    "format": "sql",
+    "concept": "Deduplication with ROW_NUMBER",
+    "text": "SELECT employee_id, name, email\nFROM (\n  SELECT employee_id, name, email,\n         ROW_NUMBER() OVER (PARTITION BY email ORDER BY employee_id) AS row_num\n  FROM employees\n) AS subquery\nWHERE row_num = 1",
+    "status": "promoted",
+    "evals": {
+      "formatCheck": true,
+      "factScore": 5,
+      "factIssues": [],
+      "duplicateOf": null
+    }
+  }
+]
