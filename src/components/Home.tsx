@@ -25,22 +25,20 @@ export function Home({ onStart, onBoard }: { onStart: () => void; onBoard: () =>
     <div className="flex flex-col items-center justify-center gap-8 text-center font-mono py-16">
       <h1 className="text-6xl sm:text-7xl font-bold tracking-tight" aria-label="likhAI">
         {WORD.split("").map((ch, i) => (
-          <span
-            key={i}
-            className={`${i < 4 ? "text-saffron" : "text-fg"} ${i < count ? "" : "invisible"}`}
-          >
-            {ch}
+          <span key={i} className="relative">
+            {i === count && count < WORD.length && (
+              <span className="text-saffron blink absolute -left-[3px]" aria-hidden="true">▌</span>
+            )}
+            <span className={`${i < 4 ? "text-saffron" : "text-fg"} ${i < count ? "" : "invisible"}`}>
+              {ch}
+            </span>
           </span>
         ))}
-        <span className="text-saffron blink" aria-hidden="true">
-          ▌
-        </span>
       </h1>
 
       <p className="text-dim text-base max-w-md leading-relaxed">
-        <span className="font-devanagari">लिख</span> · type to remember. Typing practice where every
-        snippet is real ML, stats, AI, and coding knowledge. Build speed and recall at the same
-        time.
+        Typing practice where every snippet is real ML, stats, AI, and coding knowledge. Build
+        speed and recall at the same time.
       </p>
 
       <div className="flex gap-3 text-sm">

@@ -25,6 +25,12 @@ export default function App() {
   const [domain, setDomain] = useState<DomainFilter>("all");
   const [format, setFormat] = useState<FormatFilter>("all");
 
+  // Auto-close the auth panel once the user is fully signed in (has a profile).
+  // Keeps it open during the username-claim step where !profile is true.
+  useEffect(() => {
+    if (user && profile) setAuthOpen(false);
+  }, [user, profile]);
+
   // Corpus: bundled seed by default, live Supabase snippets when available.
   // This is what makes the content pipeline -> DB -> app loop work without
   // redeploying the frontend for every new snippet.
@@ -128,7 +134,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-ink text-fg flex flex-col">
-      <header className="max-w-4xl w-full mx-auto px-6 pt-10 flex items-baseline gap-3 font-mono">
+      <header className="max-w-[85%] w-full mx-auto px-6 pt-10 flex items-baseline gap-3 font-mono relative">
         <button
           onClick={() => setView("home")}
           className="text-2xl font-bold tracking-tight focus:outline-none focus-visible:ring-2 focus-visible:ring-saffron rounded"
@@ -136,7 +142,6 @@ export default function App() {
         >
           <span className="text-saffron">likh</span>AI
         </button>
-        <span className="font-devanagari text-dim text-sm hidden sm:inline">लिख · type to remember</span>
         <nav className="ml-auto flex items-center gap-1 text-sm">
           <button className={navBtn(view === "type")} onClick={() => setView("type")}>
             type
@@ -157,15 +162,14 @@ export default function App() {
             </button>
           )}
         </nav>
-      </header>
-
-      <main className="max-w-4xl w-full mx-auto px-6 flex-1 flex flex-col justify-center gap-6 py-12">
         {(authOpen || (user && !profile)) && (
-          <div className="flex justify-end">
+          <div className="absolute right-6 top-full mt-2 z-50">
             <AuthPanel onClose={() => setAuthOpen(false)} />
           </div>
         )}
+      </header>
 
+      <main className="max-w-[85%] w-full mx-auto px-6 flex-1 flex flex-col gap-6 pt-[18vh] pb-12">
         {view === "home" && <Home onStart={() => setView("type")} onBoard={() => setView("board")} />}
 
         {view === "board" && <Leaderboard />}
@@ -173,24 +177,21 @@ export default function App() {
         {view === "type" && (
           <>
             <div className="flex flex-col gap-1 font-mono text-sm">
-              <nav className="flex gap-1 items-center" aria-label="Domain">
-                <span className="text-dim/60 text-xs w-14">domain</span>
+              <div className="flex items-center gap-2 flex-wrap" aria-label="Filters">
                 {DOMAINS.map((d) => (
                   <button key={d.id} onClick={() => setDomain(d.id)} className={navBtn(domain === d.id)}>
                     {d.label}
                   </button>
                 ))}
-              </nav>
-              <nav className="flex gap-1 items-center" aria-label="Format">
-                <span className="text-dim/60 text-xs w-14">format</span>
+                <span className="text-edge px-2">|</span>
                 {FORMATS.map((f) => (
                   <button key={f.id} onClick={() => setFormat(f.id)} className={navBtn(format === f.id)}>
                     {f.label}
                   </button>
                 ))}
-              </nav>
+              </div>
               {emptyCombo && (
-                <span className="text-error text-xs pl-14 pt-1">
+                <span className="text-error text-xs pt-1">
                   No snippets for this combo yet, showing everything instead.
                 </span>
               )}
@@ -214,14 +215,12 @@ export default function App() {
         )}
       </main>
 
-      <footer className="max-w-4xl w-full mx-auto px-6 pb-8 font-mono text-xs text-dim">
-        {view === "type" ? (
+      <footer className="max-w-[85%] w-full mx-auto px-6 pb-8 font-mono text-xs text-dim">
+        {view === "type" && (
           <>
             tab — next snippet · esc — restart · start typing to begin
             {!user && <span> · sign in to save results</span>}
           </>
-        ) : (
-          <span>built by Tanmay · typing practice that compounds</span>
         )}
       </footer>
     </div>
