@@ -1,0 +1,20 @@
+{
+  "stats": {
+    "theory": ["Law of Large Numbers", "Sampling Bias", "Bayes Theorem", "Bootstrap Resampling", "Simpson's Paradox"],
+    "interview": ["Type I vs Type II Errors", "When to Use Median over Mean", "Explaining Statistical Power"]
+  },
+  "ml": {
+    "theory": ["K-Means Clustering", "Decision Trees", "SVM Intuition", "Cross Validation", "Feature Scaling", "Class Imbalance", "PCA"],
+    "interview": ["Handling Missing Data", "Feature Selection Strategy", "Choosing Evaluation Metrics", "Explaining a Model to Stakeholders"],
+    "python": ["Pipeline with ColumnTransformer", "Cross Validation with cross_val_score", "Confusion Matrix and Classification Report"]
+  },
+  "ai": {
+    "theory": ["Tokenization", "Temperature and Sampling", "Context Windows", "LoRA Fine-Tuning", "Vector Databases", "Agent Tool Calling"],
+    "interview": ["Reducing Hallucinations", "Evaluating LLM Outputs", "Chunking Strategy for RAG"],
+    "python": ["Calling an LLM API", "Cosine Similarity Search"]
+  },
+  "coding": {
+    "python": ["Two Pointers", "Binary Search", "Hash Map Frequency Count", "List Comprehensions", "Reading CSV with Pandas", "Error Handling with try/except"],
+    "sql": ["Self Joins", "CASE WHEN Aggregation", "Date Truncation and Grouping", "Deduplication with ROW_NUMBER", "LEFT JOIN with NULL Checks"]
+  }
+}
